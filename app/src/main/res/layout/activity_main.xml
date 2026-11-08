@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A120B">
+
+    <!-- Background Foto Kopi Full Screen -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kopi_gula_aren" />
+
+    <!-- Lapisan Gelap Transparan (Dark Overlay) agar teks putih terbaca jelas -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A61A120B" />
+
+    <!-- Konten Utama (fitsSystemWindows mencegah tombol bawah kepotong HP) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <!-- Badge Brand Kecil di Atas -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#33FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:text="☕ Kopi dan Nyemil"
+                android:textColor="#F3CFA6"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Judul Besar ala Referensi ("It's a great day for coffee") -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:lineSpacingMultiplier="1.05"
+            android:text="It's a great\nday for\ncoffee."
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <!-- Tagline Menjual Pengganti "Get a taste of your wish" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Seduhan biji kopi pilihan &amp; camilan hangat, siap menemani setiap momen santaimu."
+            android:textColor="#E0D5C8"
+            android:textSize="15sp" />
+
+        <!-- Pendorong ke Bawah -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Tombol Cokelat Espresso Modern (Tidak akan kepotong navigasi HP) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartNow"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#6F4E37"
+            android:text="Start Now  →"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

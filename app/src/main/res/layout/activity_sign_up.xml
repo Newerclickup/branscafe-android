@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF7F2"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Banner Gambar Kopi di Atas -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="4dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cappuccino" />
+
+            <!-- Overlay Gelap Halus -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#551A120B" />
+
+            <!-- Badge Member Exclusive -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="#CC1A120B"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:text="✨ Kopi &amp; Nyemil Club"
+                    android:textColor="#F3CFA6"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Judul & Copywriting Profesional -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Sign Up &amp; Enjoy"
+        android:textColor="#1C1C1E"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Gabung jadi member sekarang dan nikmati kemudahan pesan kopi serta camilan favoritmu setiap hari."
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <!-- Kartu Keuntungan Member (Pengisi Ruang Tengah agar Profesional) -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keuntungan Member:"
+                android:textColor="#6F4E37"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="🎁  Promo &amp; voucher diskon khusus member"
+                android:textColor="#333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="☕  Kumpulkan poin dari setiap gelas pesananmu"
+                android:textColor="#333333"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="🛵  Pengiriman cepat langsung ke lokasimu"
+                android:textColor="#333333"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Pendorong ke Bawah -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Tombol Register & Login (Rapi dan Tidak Kepotong Navigasi Bawah) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:backgroundTint="#6F4E37"
+        android:text="Register Member Baru"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="14dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoLogin"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sudah Punya Akun? Login"
+        android:textAllCaps="false"
+        android:textColor="#6F4E37"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="14dp"
+        app:strokeColor="#6F4E37"
+        app:strokeWidth="1.5dp" />
+
+</LinearLayout>
